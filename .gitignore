@@ -1,0 +1,20 @@
+node_modules
+.venv
+dist
+.DS_Store
+
+
+# Python
+__pycache__
+.ipynb_checkpoints
+
+
+
+
+# Dataset for benchmarking
+*.npy
+*.npz
+*.csv
+*.data
+*.names
+data/**/*.json
