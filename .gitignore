@@ -17,4 +17,4 @@ __pycache__
 *.csv
 *.data
 *.names
-data/**/*.json
+data4dr/data/**/*.json
