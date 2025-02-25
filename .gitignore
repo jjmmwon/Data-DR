@@ -7,7 +7,7 @@ dist
 # Python
 __pycache__
 .ipynb_checkpoints
-
+*.ipynb
 
 
 
@@ -18,3 +18,5 @@ __pycache__
 *.data
 *.names
 data4dr/data/**/*.json
+
+
