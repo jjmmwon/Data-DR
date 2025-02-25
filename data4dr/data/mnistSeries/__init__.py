@@ -1,6 +1,6 @@
 import os
 from typing import Literal
-import BaseDataLoader
+from data4dr.data import BaseDataLoader
 
 import numpy as np
 
@@ -62,6 +62,6 @@ class MnistSeriesLoader(BaseDataLoader):
         self._data = self.scale_data(self._data)
         self._legend = [label_dict[self.name][i] for i in range(10)]
 
-        self._precomputed_knn = self.get_precomputed_knn(self._data)
+        self._precomputed_knn = self.compute_knn(self._data)
 
         self.save_data(self.base_path)

@@ -2,7 +2,7 @@ import os
 import json
 from typing import Literal
 
-import BaseDataLoader
+from data4dr.data import BaseDataLoader
 
 import numpy as np
 import pandas as pd
@@ -68,7 +68,7 @@ class UcimlLoader(BaseDataLoader):
         self._label = np.array([legend_to_label[self.name][str(label)] for label in y])
         self._legend = list(legend_to_label[self.name].keys())
 
-        self._precomputed_knn = self.get_precomputed_knn(self._data)
+        self._precomputed_knn = self.compute_knn(self._data)
 
         if not os.path.exists(self.base_path):
             os.makedirs(self.base_path)

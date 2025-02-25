@@ -1,6 +1,6 @@
 import os
 
-import BaseDataLoader
+from data4dr.data import BaseDataLoader
 
 import numpy as np
 import pandas as pd
@@ -32,7 +32,7 @@ class CelegansLoader(BaseDataLoader):
             "Not annotated",
         ]
 
-        self._precomputed_knn = self.get_precomputed_knn(self._data)
+        self._precomputed_knn = self.compute_knn(self._data)
 
         self.save_data(self.base_path)
 
@@ -99,6 +99,6 @@ class CelegansLoader(BaseDataLoader):
             "ADF, AWB",
             "Not annotated",
         ]
-        self._precomputed_knn = self.get_precomputed_knn(self._data)
+        self._precomputed_knn = self.compute_knn(self._data)
 
         self.save_data(self.base_path)

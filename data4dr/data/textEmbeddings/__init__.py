@@ -1,8 +1,7 @@
 import json
 import os
 from typing import Literal
-import BaseDataLoader
-
+from data4dr.data import BaseDataLoader
 import numpy as np
 
 
@@ -25,6 +24,6 @@ class TextEmbeddingLoader(BaseDataLoader):
             "legend"
         )
 
-        self._precomputed_knn = self.get_precomputed_knn(self._data)
+        self._precomputed_knn = self.compute_knn(self._data)
 
         self.save_data(self.base_path)
